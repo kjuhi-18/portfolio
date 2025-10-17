@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kunal Jhindal — Portfolio</title>
+<meta name="description" content="Kunal Jhindal — B.Tech AI-ML | Data Science & ML | GitHub: kjuhi-18" />
+<style>
+  :root{
+    --bg:#05060a; --bg-2:#091021; --card:rgba(255,255,255,0.03);
+    --muted:#9aa4b2; --accent:#6ee7ff; --accent-2:#7c3aed; 
+    --glass:rgba(255,255,255,0.02); --glass-2:rgba(255,255,255,0.04);
+  }
+  html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,sans-serif;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);color:#e6eef8;transition:all 0.5s ease;}
+  a { color: var(--accent); text-decoration:none; }
+  .container{ max-width:1100px; margin:0 auto; padding:28px; }
+  header{ display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+  .brand{ display:flex; gap:14px; align-items:center; }
+  .avatar{ width:64px; height:64px; border-radius:12px; display:grid; place-items:center; font-weight:700; background: linear-gradient(135deg,var(--accent-2),var(--accent)); color:#001026; font-family:monospace; font-size:20px; box-shadow:0 6px 20px rgba(124,58,237,0.15), inset 0 -6px 24px rgba(0,0,0,0.25);}
+  h1{ margin:0; font-size:20px; letter-spacing:0.2px; }
+  .nav{ display:flex; gap:12px; flex-wrap:wrap; }
+  .nav button{ padding:6px 12px; border-radius:8px; border:none; background:var(--glass-2); color:var(--accent); cursor:pointer; font-weight:600; transition:0.3s; }
+  .nav button:hover{ background:var(--accent-2); color:#001026; }
+  main{ margin-top:28px; position:relative; min-height:60vh; }
+  section{ display:none; opacity:0; transition:opacity 0.8s ease; }
+  section.active{ display:block; opacity:1; }
+  .card{ background: var(--card); border-radius:14px; padding:18px; box-shadow:0 6px 30px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.02); margin-bottom:18px; }
+  h2,h3,h4{ margin:0 0 8px 0; }
+  p{ margin:4px 0; }
+  .small{ font-size:12px; color:var(--muted); }
+  .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:10px; background: linear-gradient(90deg, rgba(110,231,255,0.12), rgba(124,58,237,0.12)); border:1px solid rgba(255,255,255,0.04); color:#dff7ff; font-weight:600; font-size:13px; }
+  .repo-grid{ display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px; }
+  @media(min-width:900px){ .repo-grid{ grid-template-columns:repeat(2,1fr); } }
+  .repo{ padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); }
+  .repo h4{ margin:0 0 6px 0; font-size:15px; }
+  .repo p{ margin:0; color:var(--muted); font-size:13px; min-height:36px; }
+  footer{ margin-top:22px; color:var(--muted); text-align:center; font-size:13px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="brand">
+      <div class="avatar">KJ</div>
+      <div>
+        <h1>Kunal Jhindal</h1>
+        <p class="small">B.Tech AI-ML • Data Science & ML • Pune, India</p>
+      </div>
+    </div>
+    <div class="nav">
+      <button data-section="about">About</button>
+      <button data-section="projects">Projects</button>
+      <button data-section="skills">Skills</button>
+      <button data-section="contact">Contact</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="active">
+      <div class="card" style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;">
+        <!-- Profile Photo -->
+        <div>
+          <img src="profile.jpeg" alt="Kunal Jhindal" style="width:150px;border-radius:12px;box-shadow:0 6px 20px rgba(124,58,237,0.25);"/>
+        </div>
+
+        <!-- Intro + Roles + Certifications -->
+        <div style="flex:1;">
+          <h2 style="opacity:0;" id="welcome">Hi — I'm Kunal 👋</h2>
+          <p class="small" style="margin-top:8px;">
+            🎓 I am a B.Tech student in Artificial Intelligence & Machine Learning (AIML) at Symbiosis Institute Of Technology, Pune, with a strong interest in Data Science. With a foundation in C, Python, SQL, and Data Structures & Algorithms, I enjoy solving problems through data-driven approaches and building projects that connect theory with practical applications.
+          </p>
+          <p class="small">
+            💡 My projects range from C-based applications (like a currency converter to explore logic and functions) to Python–MySQL systems (such as a student management platform with a frontend). These experiences have strengthened my analytical thinking and technical implementation skills.
+          </p>
+          <p class="small">
+            📊 I am particularly interested in data analysis, visualization, and extracting insights from structured datasets to support decision-making and innovation.
+          </p>
+          <p class="small">
+            🚀 My goal is to keep enhancing my skills in data science and analytics, and I am open to internships, collaborations, and mentorship opportunities that help me grow in this domain.
+          </p>
+
+          <div style="margin-top:14px;">
+            <a class="btn" href="resume.pdf" target="_blank">⬇ Download Resume</a>
+            <a class="btn" href="https://github.com/kjuhi-18" target="_blank">GitHub</a>
+          </div>
+
+          <!-- Roles -->
+          <h3 style="margin-top:18px;">Featured Roles</h3>
+          <ul style="margin:6px 0 0 16px;color:var(--muted);font-size:13px;">
+            <li><strong>Gemini Student Ambassador</strong> — Google (08/2025 - Present)</li>
+            <li><strong>Visual Media Editor</strong> — AIML Department (07/2025 - Present)</li>
+            <li><strong>Tech Team Member</strong> — AI-Club (10/2024 - Present)</li>
+          </ul>
+
+          <!-- Certifications -->
+          <h3 style="margin-top:18px;">Selected Certifications</h3>
+          <ul style="margin:6px 0 0 16px;color:var(--muted);font-size:13px;">
+            <li>Python for Data Science (IBM)</li>
+            <li>Machine Learning with Python (IBM)</li>
+            <li>Generative AI & ChatGPT (GfG)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="card">
+        <h3>Projects</h3>
+        <input id="search" type="search" placeholder="Search projects..." style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:var(--glass-2);color:inherit;width:100%;margin-top:8px;" />
+        <div id="repoGrid" class="repo-grid"></div>
+        <div id="status" class="small" style="margin-top:8px;">Fetching repos…</div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="card">
+        <h3>Skills</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">Python</div>
+          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">SQL</div>
+          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">C</div>
+          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">Machine Learning</div>
+          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">Data Analysis</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="card">
+        <h3>Contact</h3>
+        <ul style="list-style:none;padding-left:0;margin-top:8px;color:var(--muted);">
+          <li>Email: <a href="mailto:jhindalkunal457@gmail.com">jhindalkunal457@gmail.com</a></li>
+          <li>Phone: 8979107422</li>
+          <li>Location: Pune, India</li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/kunal-jhindal" target="_blank">/in/kunal-jhindal</a></li>
+          <li>GitHub: <a href="https://github.com/kjuhi-18" target="_blank">github.com/kjuhi-18</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with ❤️ • Single-file portfolio
+  </footer>
+</div>
+
+<script>
+  // Fade-in welcome
+  window.addEventListener('load',()=>document.getElementById('welcome').style.opacity=1);
+
+  // Navigation
+  const buttons = document.querySelectorAll('.nav button');
+  const sections = document.querySelectorAll('main section');
+  buttons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      sections.forEach(s=>s.classList.remove('active'));
+      document.getElementById(btn.dataset.section).classList.add('active');
+    });
+  });
+
+  // GitHub repo fetch
+  const GITHUB_USER='kjuhi-18';
+  const PER_PAGE=100;
+  const statusEl=document.getElementById('status');
+  const repoGrid=document.getElementById('repoGrid');
+  const searchInput=document.getElementById('search');
+
+  let cachedRepos=[];
+  async function fetchRepos(){
+    statusEl.textContent='Fetching repos…';
+    try{
+      const resp=await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=${PER_PAGE}&sort=updated`);
+      if(!resp.ok)throw new Error('Failed to fetch GitHub repos');
+      const data=await resp.json();
+      cachedRepos=data;
+      renderRepos(data);
+      statusEl.textContent=`Showing ${data.length} public repos`;
+    }catch(err){statusEl.textContent=err.message;}
+  }
+  function renderRepos(repos){
+    repoGrid.innerHTML='';
+    repos.forEach(r=>{
+      const div=document.createElement('div');
+      div.className='repo';
+      div.innerHTML=`<a href="${r.html_url}" target="_blank" style="color:inherit;text-decoration:none;"><h4>${r.name}</h4><p>${r.description||'No description'}</p><div class="small">★ ${r.stargazers_count} • ${r.language||'—'}</div></a>`;
+      repoGrid.appendChild(div);
+    });
+  }
+  searchInput.addEventListener('input',()=>{const q=(searchInput.value||'').toLowerCase();renderRepos(cachedRepos.filter(r=>r.name.toLowerCase().includes(q)|| (r.description&&r.description.toLowerCase().includes(q))));});
+  fetchRepos();
+</script>
+</body>
+</html>
