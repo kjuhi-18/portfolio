@@ -84,41 +84,74 @@
     <section id="about" class="active">
       <div class="card" style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;">
         <div>
-          <img src="profile.jpeg" alt="Kunal Jhindal" style="width:150px;border-radius:12px;box-shadow:0 6px 20px rgba(124,58,237,0.25);"/>
+          <img src="profile.jpeg" alt="Kunal Jhindal" loading="lazy"
+               style="width:150px;border-radius:12px;box-shadow:0 6px 20px rgba(124,58,237,0.25);"/>
         </div>
+
         <div style="flex:1;">
           <h2 style="opacity:0;" id="welcome" class="typing">Hi — I'm Kunal 👋</h2>
+
           <p class="small" style="margin-top:8px;">
-            🎓 B.Tech student in Artificial Intelligence & Machine Learning (AIML) at Symbiosis Institute Of Technology, Pune. Strong interest in Data Science, Python, SQL, and Machine Learning.
+            🎓 B.Tech student in AI & ML at Symbiosis Institute Of Technology, Pune. Passionate about Data Science, Python, SQL, Machine Learning, and solving real-world problems.
           </p>
           <p class="small">
-            💡 Projects include Python–MySQL systems, C applications, and ML models.
+            💡 I work on diverse projects spanning Python–MySQL systems, C applications, ML models, and more.
           </p>
           <p class="small">
-            🚀 Open to internships, collaborations, and mentorship opportunities in Data Science.
+            🚀 Open to internships, collaborations, and mentorship opportunities in Data Science & AI.
           </p>
+
           <div style="margin-top:14px;">
             <a class="btn" href="resume.pdf" target="_blank">⬇ Download Resume</a>
             <a class="btn" href="https://github.com/kjuhi-18" target="_blank">GitHub</a>
           </div>
 
-          <!-- Roles -->
-          <h3 style="margin-top:18px;">Featured Roles</h3>
+          <hr style="margin:18px 0; border:1px solid rgba(255,255,255,0.05);" />
+
+          <h3>Featured Roles & Leadership</h3>
           <ul style="margin:6px 0 0 16px;color:var(--muted);font-size:13px;">
             <li><strong>Gemini Student Ambassador</strong> — Google (08/2025 - Present)</li>
             <li><strong>Visual Media Editor</strong> — AIML Department (07/2025 - Present)</li>
             <li><strong>Tech Team Member</strong> — AI-Club (10/2024 - Present)</li>
+            <li><strong>Finance Executive</strong> — Varsity Care (10/2024 - Present)</li>
           </ul>
 
-          <!-- Certifications -->
-          <h3 style="margin-top:18px;">Certifications & Badges</h3>
+          <hr style="margin:18px 0; border:1px solid rgba(255,255,255,0.05);" />
+
+          <h3>Certifications & Achievements</h3>
           <ul style="margin:6px 0 0 16px;color:var(--muted);font-size:13px;">
-            <li>Python for Data Science (IBM)</li>
+            <li>Python for Data Science & AI Development (IBM)</li>
+            <li>Basics of Data Structures & Algorithms (SkillUp Education)</li>
+            <li>Excel Basics for Data Analysis (SkillUp EdTech)</li>
             <li>Machine Learning with Python (IBM)</li>
-            <li>Generative AI & ChatGPT (GfG)</li>
-            <li>HackerRank Python Gold Badge</li>
-            <li>HackerRank SQL Gold Badge</li>
+            <li>What is Generative AI (LinkedIn)</li>
+            <li>Mastering Generative AI & ChatGPT (GfG)</li>
+            <li>Data Science Summer School (DS3)</li>
           </ul>
+
+          <hr style="margin:18px 0; border:1px solid rgba(255,255,255,0.05);" />
+
+          <h3>Technical & Leadership Skills</h3>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+            <div class="chip" style="background: linear-gradient(135deg, #6ee7ff, #7c3aed); color:#001026;">Python</div>
+            <div class="chip">R</div>
+            <div class="chip">C</div>
+            <div class="chip">SQL</div>
+            <div class="chip" style="background: linear-gradient(135deg, #6ee7ff, #7c3aed); color:#001026;">Machine Learning</div>
+            <div class="chip">Data Analysis</div>
+            <div class="chip">Data Preprocessing</div>
+            <div class="chip">DSA</div>
+            <div class="chip">Operating Systems</div>
+            <div class="chip">MS-Excel</div>
+            <div class="chip">Project Handling</div>
+            <div class="chip">Management Skills</div>
+            <div class="chip">Leadership Skills</div>
+            <div class="chip">Communication Skills</div>
+          </div>
+
+          <p class="small" style="margin-top:14px; font-style:italic;">
+            🌟 Curious? Check out my <a href="#projects">projects</a> and <a href="#stats">GitHub</a> for hands-on experiments and innovative solutions!
+          </p>
         </div>
       </div>
     </section>
@@ -137,8 +170,6 @@
     <section id="skills">
       <div class="card">
         <h3>Skills</h3>
-
-        <!-- Technical Skills -->
         <h4 style="margin-top:12px;">Technical Skills</h4>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
           <div class="chip">Python</div>
@@ -151,8 +182,6 @@
           <div class="chip">DSA</div>
           <div class="chip">Operating Systems</div>
         </div>
-
-        <!-- Soft Skills -->
         <h4 style="margin-top:14px;">Soft Skills & Interests</h4>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
           <div class="chip">Problem Solving</div>
@@ -258,5 +287,11 @@
   });
   fetchRepos();
 </script>
+
+<style>
+  /* Hover animations for roles, certifications, chips */
+  #about ul li:hover { color: var(--accent-2); transform: scale(1.02); transition: 0.3s; }
+  .chip:hover { transform: scale(1.05); background: linear-gradient(135deg, #6ee7ff, #7c3aed); color:#001026; }
+</style>
 </body>
 </html>
