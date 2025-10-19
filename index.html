@@ -11,10 +11,10 @@
     --muted:#9aa4b2; --accent:#6ee7ff; --accent-2:#7c3aed; 
     --glass:rgba(255,255,255,0.02); --glass-2:rgba(255,255,255,0.04);
   }
-  html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,sans-serif;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);color:#e6eef8;transition:all 0.5s ease;}
+  html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,sans-serif;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);color:#e6eef8;transition:all 0.5s ease;scroll-behavior:smooth;}
   a { color: var(--accent); text-decoration:none; }
   .container{ max-width:1100px; margin:0 auto; padding:28px; }
-  header{ display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+  header{ display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; position:sticky; top:0; background:var(--bg-2); z-index:1000; padding:10px 28px; border-bottom:1px solid rgba(255,255,255,0.05);}
   .brand{ display:flex; gap:14px; align-items:center; }
   .avatar{ width:64px; height:64px; border-radius:12px; display:grid; place-items:center; font-weight:700; background: linear-gradient(135deg,var(--accent-2),var(--accent)); color:#001026; font-family:monospace; font-size:20px; box-shadow:0 6px 20px rgba(124,58,237,0.15), inset 0 -6px 24px rgba(0,0,0,0.25);}
   h1{ margin:0; font-size:20px; letter-spacing:0.2px; }
@@ -28,7 +28,8 @@
   h2,h3,h4{ margin:0 0 8px 0; }
   p{ margin:4px 0; }
   .small{ font-size:12px; color:var(--muted); }
-  .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:10px; background: linear-gradient(90deg, rgba(110,231,255,0.12), rgba(124,58,237,0.12)); border:1px solid rgba(255,255,255,0.04); color:#dff7ff; font-weight:600; font-size:13px; }
+  .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:10px; background: linear-gradient(90deg, rgba(110,231,255,0.12), rgba(124,58,237,0.12)); border:1px solid rgba(255,255,255,0.04); color:#dff7ff; font-weight:600; font-size:13px; transition:0.3s; }
+  .btn:hover{ background: linear-gradient(135deg,#6ee7ff,#7c3aed); color:#001026; transform:scale(1.05);}
   .repo-grid{ display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px; }
   @media(min-width:900px){ .repo-grid{ grid-template-columns:repeat(2,1fr); } }
 
@@ -49,10 +50,14 @@
     transform:scale(1.05);
   }
 
-  .repo{ padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); }
+  .repo{ padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); transition:0.3s; }
+  .repo:hover{ transform:scale(1.02); box-shadow:0 10px 30px rgba(0,0,0,0.3);}
   .repo h4{ margin:0 0 6px 0; font-size:15px; }
   .repo p{ margin:0; color:var(--muted); font-size:13px; min-height:36px; }
   footer{ margin-top:22px; color:var(--muted); text-align:center; font-size:13px; }
+
+  /* Typing Effect */
+  .typing { display:inline-block; border-right:2px solid var(--accent); white-space:nowrap; overflow:hidden;}
 </style>
 </head>
 <body>
@@ -69,6 +74,7 @@
       <button data-section="about">About</button>
       <button data-section="projects">Projects</button>
       <button data-section="skills">Skills</button>
+      <button data-section="stats">GitHub Stats</button>
       <button data-section="contact">Contact</button>
     </div>
   </header>
@@ -81,18 +87,15 @@
           <img src="profile.jpeg" alt="Kunal Jhindal" style="width:150px;border-radius:12px;box-shadow:0 6px 20px rgba(124,58,237,0.25);"/>
         </div>
         <div style="flex:1;">
-          <h2 style="opacity:0;" id="welcome">Hi — I'm Kunal 👋</h2>
+          <h2 style="opacity:0;" id="welcome" class="typing">Hi — I'm Kunal 👋</h2>
           <p class="small" style="margin-top:8px;">
-            🎓 I am a B.Tech student in Artificial Intelligence & Machine Learning (AIML) at Symbiosis Institute Of Technology, Pune, with a strong interest in Data Science. With a foundation in C, Python, SQL, and Data Structures & Algorithms, I enjoy solving problems through data-driven approaches and building projects that connect theory with practical applications.
+            🎓 B.Tech student in Artificial Intelligence & Machine Learning (AIML) at Symbiosis Institute Of Technology, Pune. Strong interest in Data Science, Python, SQL, and Machine Learning.
           </p>
           <p class="small">
-            💡 My projects range from C-based applications (like a currency converter to explore logic and functions) to Python–MySQL systems (such as a student management platform with a frontend). These experiences have strengthened my analytical thinking and technical implementation skills.
+            💡 Projects include Python–MySQL systems, C applications, and ML models.
           </p>
           <p class="small">
-            📊 I am particularly interested in data analysis, visualization, and extracting insights from structured datasets to support decision-making and innovation.
-          </p>
-          <p class="small">
-            🚀 My goal is to keep enhancing my skills in data science and analytics, and I am open to internships, collaborations, and mentorship opportunities that help me grow in this domain.
+            🚀 Open to internships, collaborations, and mentorship opportunities in Data Science.
           </p>
           <div style="margin-top:14px;">
             <a class="btn" href="resume.pdf" target="_blank">⬇ Download Resume</a>
@@ -108,11 +111,13 @@
           </ul>
 
           <!-- Certifications -->
-          <h3 style="margin-top:18px;">Selected Certifications</h3>
+          <h3 style="margin-top:18px;">Certifications & Badges</h3>
           <ul style="margin:6px 0 0 16px;color:var(--muted);font-size:13px;">
             <li>Python for Data Science (IBM)</li>
             <li>Machine Learning with Python (IBM)</li>
             <li>Generative AI & ChatGPT (GfG)</li>
+            <li>HackerRank Python Gold Badge</li>
+            <li>HackerRank SQL Gold Badge</li>
           </ul>
         </div>
       </div>
@@ -162,6 +167,21 @@
       </div>
     </section>
 
+    <!-- GitHub Stats -->
+    <section id="stats">
+      <div class="card">
+        <h3>GitHub Stats & Activity</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;">
+          <img src="https://github-readme-stats.vercel.app/api?username=kjuhi-18&show_icons=true&theme=tokyonight" style="border-radius:12px;flex:1;min-width:300px;" />
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kjuhi-18&layout=compact&theme=tokyonight" style="border-radius:12px;flex:1;min-width:300px;" />
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;">
+          <img src="https://github-readme-streak-stats.herokuapp.com/?user=kjuhi-18&theme=tokyonight" style="border-radius:12px;flex:1;min-width:300px;" />
+          <img src="https://github-profile-trophy.vercel.app/?username=kjuhi-18&theme=neon&no-frame=false&no-bg=true&margin-w=4" style="border-radius:12px;flex:1;min-width:300px;" />
+        </div>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact">
       <div class="card">
@@ -172,6 +192,7 @@
           <li>Location: Pune, India</li>
           <li>LinkedIn: <a href="https://www.linkedin.com/in/kunal-jhindal" target="_blank">/in/kunal-jhindal</a></li>
           <li>GitHub: <a href="https://github.com/kjuhi-18" target="_blank">github.com/kjuhi-18</a></li>
+          <li>HackerRank: <a href="https://www.hackerrank.com/profile/kunal_jhindal_b1" target="_blank">Profile</a></li>
         </ul>
       </div>
     </section>
@@ -183,8 +204,15 @@
 </div>
 
 <script>
-  // Fade-in welcome
-  window.addEventListener('load',()=>document.getElementById('welcome').style.opacity=1);
+  // Fade-in typing effect
+  const welcome = document.getElementById('welcome');
+  let text = welcome.textContent;
+  welcome.textContent='';
+  let i=0;
+  function typeWriter(){
+    if(i<text.length){welcome.textContent+=text.charAt(i);i++;setTimeout(typeWriter,80);}
+  }
+  window.addEventListener('load',typeWriter);
 
   // Navigation
   const buttons = document.querySelectorAll('.nav button');
@@ -226,13 +254,8 @@
   }
   searchInput.addEventListener('input',()=>{
     const q=(searchInput.value||'').toLowerCase();
-renderRepos(cachedRepos.filter(r=>
-      r.name.toLowerCase().includes(q) || 
-      (r.description && r.description.toLowerCase().includes(q))
-    ));
+    renderRepos(cachedRepos.filter(r=>r.name.toLowerCase().includes(q) || (r.description||'').toLowerCase().includes(q)));
   });
-
-  // Initial fetch
   fetchRepos();
 </script>
 </body>
