@@ -31,6 +31,24 @@
   .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:10px; background: linear-gradient(90deg, rgba(110,231,255,0.12), rgba(124,58,237,0.12)); border:1px solid rgba(255,255,255,0.04); color:#dff7ff; font-weight:600; font-size:13px; }
   .repo-grid{ display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px; }
   @media(min-width:900px){ .repo-grid{ grid-template-columns:repeat(2,1fr); } }
+
+  /* Chips */
+  .chip{
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:12px;
+    color:#dff7ff;
+    background: rgba(124,58,237,0.15);
+    border:1px solid rgba(255,255,255,0.03);
+    transition: all 0.3s ease;
+    cursor:default;
+  }
+  .chip:hover{
+    background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+    color:#001026;
+    transform:scale(1.05);
+  }
+
   .repo{ padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); }
   .repo h4{ margin:0 0 6px 0; font-size:15px; }
   .repo p{ margin:0; color:var(--muted); font-size:13px; min-height:36px; }
@@ -59,12 +77,9 @@
     <!-- About -->
     <section id="about" class="active">
       <div class="card" style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;">
-        <!-- Profile Photo -->
         <div>
           <img src="profile.jpeg" alt="Kunal Jhindal" style="width:150px;border-radius:12px;box-shadow:0 6px 20px rgba(124,58,237,0.25);"/>
         </div>
-
-        <!-- Intro + Roles + Certifications -->
         <div style="flex:1;">
           <h2 style="opacity:0;" id="welcome">Hi — I'm Kunal 👋</h2>
           <p class="small" style="margin-top:8px;">
@@ -79,7 +94,6 @@
           <p class="small">
             🚀 My goal is to keep enhancing my skills in data science and analytics, and I am open to internships, collaborations, and mentorship opportunities that help me grow in this domain.
           </p>
-
           <div style="margin-top:14px;">
             <a class="btn" href="resume.pdf" target="_blank">⬇ Download Resume</a>
             <a class="btn" href="https://github.com/kjuhi-18" target="_blank">GitHub</a>
@@ -118,12 +132,32 @@
     <section id="skills">
       <div class="card">
         <h3>Skills</h3>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
-          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">Python</div>
-          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">SQL</div>
-          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">C</div>
-          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">Machine Learning</div>
-          <div style="padding:6px 10px;border-radius:999px;font-size:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--muted);">Data Analysis</div>
+
+        <!-- Technical Skills -->
+        <h4 style="margin-top:12px;">Technical Skills</h4>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+          <div class="chip">Python</div>
+          <div class="chip">SQL</div>
+          <div class="chip">C</div>
+          <div class="chip">Machine Learning</div>
+          <div class="chip">Data Analysis</div>
+          <div class="chip">Data Visualization</div>
+          <div class="chip">MySQL</div>
+          <div class="chip">DSA</div>
+          <div class="chip">Operating Systems</div>
+        </div>
+
+        <!-- Soft Skills -->
+        <h4 style="margin-top:14px;">Soft Skills & Interests</h4>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+          <div class="chip">Problem Solving</div>
+          <div class="chip">Teamwork</div>
+          <div class="chip">Communication</div>
+          <div class="chip">Creativity</div>
+          <div class="chip">Critical Thinking</div>
+          <div class="chip">Time Management</div>
+          <div class="chip">Adaptability</div>
+          <div class="chip">Continuous Learning</div>
         </div>
       </div>
     </section>
@@ -190,9 +224,5 @@
       repoGrid.appendChild(div);
     });
   }
-  searchInput.addEventListener('input',()=>{const q=(searchInput.value||'').toLowerCase();renderRepos(cachedRepos.filter(r=>r.name.toLowerCase().includes(q)|| (r.description&&r.description.toLowerCase().includes(q))));});
-  fetchRepos();
-</script>
-</body>
-</html>
-
+  searchInput.addEventListener('input',()=>{
+    const q=(searchInput.value||'').toLowerCase();
