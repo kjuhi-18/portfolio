@@ -226,3 +226,14 @@
   }
   searchInput.addEventListener('input',()=>{
     const q=(searchInput.value||'').toLowerCase();
+renderRepos(cachedRepos.filter(r=>
+      r.name.toLowerCase().includes(q) || 
+      (r.description && r.description.toLowerCase().includes(q))
+    ));
+  });
+
+  // Initial fetch
+  fetchRepos();
+</script>
+</body>
+</html>
