@@ -16,7 +16,12 @@
   .container{ max-width:1100px; margin:0 auto; padding:28px; }
   header{ display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; position:sticky; top:0; background:var(--bg-2); z-index:1000; padding:10px 28px; border-bottom:1px solid rgba(255,255,255,0.05);}
   .brand{ display:flex; gap:14px; align-items:center; }
-  .avatar img {   width: 100%;   height: 100%;   border-radius: 12px;   object-fit: cover;   display: block; }{ width:64px; height:64px; border-radius:12px; display:grid; place-items:center; font-weight:700; background: linear-gradient(135deg,var(--accent-2),var(--accent)); color:#001026; font-family:monospace; font-size:20px; box-shadow:0 6px 20px rgba(124,58,237,0.15), inset 0 -6px 24px rgba(0,0,0,0.25);}
+  .avatar {
+    width: 64px; height: 64px; border-radius: 12px; overflow: hidden; display: grid; place-items: center;
+    font-weight: 700; background: linear-gradient(135deg, var(--accent-2), var(--accent)); color:#001026; font-family: monospace; font-size:20px;
+    box-shadow: 0 6px 20px rgba(124,58,237,0.15), inset 0 -6px 24px rgba(0,0,0,0.25);
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; cursor:pointer; }
   h1{ margin:0; font-size:20px; letter-spacing:0.2px; }
   .nav{ display:flex; gap:12px; flex-wrap:wrap; }
   .nav button{ padding:6px 12px; border-radius:8px; border:none; background:var(--glass-2); color:var(--accent); cursor:pointer; font-weight:600; transition:0.3s; }
@@ -24,14 +29,15 @@
   main{ margin-top:28px; position:relative; min-height:60vh; }
   section{ display:none; opacity:0; transition:opacity 0.8s ease; }
   section.active{ display:block; opacity:1; }
-  .card{ background: var(--card); border-radius:14px; padding:18px; box-shadow:0 6px 30px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.02); margin-bottom:18px; }
+  .card{ background: var(--card); border-radius:14px; padding:18px; box-shadow:0 6px 30px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.02); margin-bottom:18px; transition:0.5s;}
   h2,h3,h4{ margin:0 0 8px 0; }
   p{ margin:4px 0; }
   .small{ font-size:12px; color:var(--muted); }
   .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:10px; background: linear-gradient(90deg, rgba(110,231,255,0.12), rgba(124,58,237,0.12)); border:1px solid rgba(255,255,255,0.04); color:#dff7ff; font-weight:600; font-size:13px; transition:0.3s; }
   .btn:hover{ background: linear-gradient(135deg,#6ee7ff,#7c3aed); color:#001026; transform:scale(1.05);}
   .repo-grid{ display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px; }
-  @media(min-width:900px){ .repo-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(min-width:600px){ .repo-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(min-width:900px){ .repo-grid{ grid-template-columns:repeat(3,1fr); } }
   .chip{ padding:6px 12px; border-radius:999px; font-size:12px; color:#dff7ff; background: rgba(124,58,237,0.15); border:1px solid rgba(255,255,255,0.03); transition: all 0.3s ease; cursor:default; }
   .chip:hover{ background: linear-gradient(135deg, #6ee7ff, #7c3aed); color:#001026; transform:scale(1.05); }
   .repo{ padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); transition:0.3s; }
@@ -39,25 +45,30 @@
   .repo h4{ margin:0 0 6px 0; font-size:15px; }
   .repo p{ margin:0; color:var(--muted); font-size:13px; min-height:36px; }
   footer{ margin-top:22px; color:var(--muted); text-align:center; font-size:13px; }
-  .typing { display:inline-block; border-right:2px solid var(--accent); white-space:nowrap; overflow:hidden;}
+  .typing { display:inline-block; border-right:2px solid var(--accent); white-space:nowrap; overflow:hidden; animation: blink 0.7s steps(1) infinite;}
+  @keyframes blink { 50% { border-color: transparent; } }
 </style>
 </head>
 <body>
 <div class="container">
 <header>
 <div class="brand">
-<div class="avatar">   <img src="profile.jpeg" alt="Kunal Jhindal" /> </div>
+<div class="avatar">
+  <a href="profile.jpeg" target="_blank">
+    <img src="profile.jpeg" alt="Kunal Jhindal" />
+  </a>
+</div>
 <div>
 <h1>Kunal Jhindal</h1>
 <p class="small">B.Tech AI-ML • Data Science & ML • Pune, India</p>
 </div>
 </div>
 <div class="nav">
-<button data-section="about">About</button>
-<button data-section="projects">Projects</button>
-<button data-section="skills">Skills</button>
-<button data-section="stats">GitHub Stats</button>
-<button data-section="contact">Contact</button>
+  <button data-section="about">About</button>
+  <button data-section="projects">Projects</button>
+  <button data-section="skills">Skills</button>
+  <button data-section="stats">GitHub Stats</button>
+  <button data-section="contact">Contact</button>
 </div>
 </header>
 <main>
@@ -156,14 +167,53 @@
 <footer>Built with ❤️ • Single-file portfolio</footer>
 </div>
 <script>
-const welcome=document.getElementById('welcome');let text=welcome.textContent;welcome.textContent='';let i=0;function typeWriter(){if(i<text.length){welcome.textContent+=text.charAt(i);i++;setTimeout(typeWriter,80);}}window.addEventListener('load',typeWriter);
-const buttons=document.querySelectorAll('.nav button');const sections=document.querySelectorAll('main section');buttons.forEach(btn=>{btn.addEventListener('click',()=>{sections.forEach(s=>s.classList.remove('active'));document.getElementById(btn.dataset.section).classList.add('active');});});
-const GITHUB_USER='kjuhi-18';const PER_PAGE=100;const statusEl=document.getElementById('status');const repoGrid=document.getElementById('repoGrid');const searchInput=document.getElementById('search');let cachedRepos=[];
-async function fetchRepos(){statusEl.textContent='Fetching repos…';try{const resp=await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=${PER_PAGE}&sort=updated`);if(!resp.ok)throw new Error('Failed to fetch GitHub repos');const data=await resp.json();cachedRepos=data;renderRepos(data);statusEl.textContent=`Showing ${data.length} public repos`;}catch(err){statusEl.textContent=err.message;}}
-function renderRepos(repos){repoGrid.innerHTML='';repos.forEach(r=>{const div=document.createElement('div');div.className='repo';div.innerHTML=`<a href="${r.html_url}" target="_blank" style="color:inherit;text-decoration:none;"><h4>${r.name}</h4><p>${r.description||'No description'}</p><div class="small">★ ${r.stargazers_count} • ${r.language||'—'}</div></a>`;repoGrid.appendChild(div);});}
-searchInput.addEventListener('input',()=>{const q=(searchInput.value||'').toLowerCase();renderRepos(cachedRepos.filter(r=>r.name.toLowerCase().includes(q)||(r.description||'').toLowerCase().includes(q)));});fetchRepos();
+/* Typing effect */
+const welcome = document.getElementById('welcome');
+let text = welcome.textContent; welcome.textContent=''; let i=0;
+function typeWriter(){ if(i<text.length){ welcome.textContent+=text.charAt(i); i++; setTimeout(typeWriter,80); } }
+window.addEventListener('load', typeWriter);
+
+/* Section nav */
+const buttons = document.querySelectorAll('.nav button');
+const sections = document.querySelectorAll('main section');
+buttons.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    sections.forEach(s=>s.classList.remove('active'));
+    const sec = document.getElementById(btn.dataset.section);
+    sec.classList.add('active');
+    sec.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* GitHub repos */
+const GITHUB_USER='kjuhi-18'; const PER_PAGE=100;
+const statusEl=document.getElementById('status'); const repoGrid=document.getElementById('repoGrid');
+const searchInput=document.getElementById('search'); let cachedRepos=[];
+async function fetchRepos(){
+  statusEl.textContent='Fetching repos…';
+  try{
+    const resp=await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=${PER_PAGE}&sort=updated`);
+    if(!resp.ok)throw new Error('Failed to fetch GitHub repos');
+    const data = (await resp.json()).filter(r => !r.fork && !r.archived);
+    cachedRepos=data; renderRepos(data);
+    statusEl.textContent=`Showing ${data.length} public repos`;
+  }catch(err){ statusEl.textContent=err.message; }
+}
+function renderRepos(repos){
+  repoGrid.innerHTML='';
+  repos.forEach(r=>{
+    const div=document.createElement('div'); div.className='repo';
+    div.innerHTML=`<a href="${r.html_url}" target="_blank" style="color:inherit;text-decoration:none;">
+      <h4>${r.name}</h4><p>${r.description||'No description'}</p>
+      <div class="small">★ ${r.stargazers_count} • ${r.language||'—'}</div></a>`;
+    repoGrid.appendChild(div);
+  });
+}
+searchInput.addEventListener('input',()=>{
+  const q=(searchInput.value||'').toLowerCase();
+  renderRepos(cachedRepos.filter(r=>r.name.toLowerCase().includes(q)||(r.description||'').toLowerCase().includes(q)));
+});
+fetchRepos();
 </script>
 </body>
 </html>
-
-
