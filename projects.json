@@ -1,85 +1,125 @@
-
 [
-  
   {
     "name": "SmartProcure",
     "link": "https://github.com/kjuhi-18/SmartProcure",
-    "tags": ["Python", "ML"],
+    "tags": [
+      "Python",
+      "ML"
+    ],
     "shortDescription": "SmartProcure AI predicts delivery delays and optimizes dispatch using ML-powered logistics intelligence."
-  },
-  {
-    "name": "Movie Data Dashboard",
-    "link": "https://github.com/kjuhi-18/Book-My-Show-Analysis",
-    "tags": ["Python", "MySQL", "Flask", "HTML", "CSS"],
-    "shortDescription": "Interactive dashboard analysing movie ticket sales and user behaviour from BookMyShow data."
-  },
-  {
-    "name": "Mapping Unsafe Drinking Water Zones",
-    "link": "https://github.com/kjuhi-18/Mapping-Unsafe-Drinking-Water-Zones",
-    "tags": ["Python", "Streamlit", "ML"],
-    "shortDescription": "Geospatial map visualising unsafe drinking water zones across districts using ML clustering."
-  },
-  {
-    "name": "Customer Churn Predictor",
-    "link": "https://github.com/kjuhi-18/Customer-Churn-Prediction",
-    "tags": ["Python", "ML"],
-    "shortDescription": "End-to-end machine learning project to analyze, model, and predict customer churn using EDA and advanced classification techniques."
   },
   {
     "name": "UIDAI Aadhaar Decision Intelligence System",
     "link": "https://github.com/kjuhi-18/uidai-decision-intelligence-system",
-    "tags": ["Python", "ML"],
+    "tags": [
+      "Python",
+      "ML"
+    ],
     "shortDescription": "Hackathon project that transforms UIDAI Aadhaar enrolment and update data into actionable insights using EDA anomaly detection and machine learning forecasting"
-  },
-  {
-    "name": "English French Translator",
-    "link": "https://github.com/kjuhi-18/English-French-Translator",
-    "tags": ["Python", "GenAI"],
-    "shortDescription": "Translator to translate between English and French using Tranformers."
   },
   {
     "name": "Migrant Health Records (SIH 2025)",
     "link": "https://github.com/kjuhi-18/migrant-health-records",
-    "tags": ["React.js", "CSS / Tailwind", "Node.js", "Express.js", "MySQL"],
+    "tags": [
+      "React.js",
+      "CSS / Tailwind",
+      "Node.js",
+      "Express.js",
+      "MySQL"
+    ],
     "shortDescription": "Full-stack application for managing migrant health records under SIH 2025 initiative."
   },
   {
-    "name": "Mail Automator",
-    "link": "https://github.com/kjuhi-18/Mail-Automator",
-    "tags": ["Python"],
-    "shortDescription": "Tool to automate sending templated emails for campaigns & reminders."
+    "name": "Customer Churn Predictor",
+    "link": "https://github.com/kjuhi-18/Customer-Churn-Prediction",
+    "tags": [
+      "Python",
+      "ML"
+    ],
+    "shortDescription": "End-to-end machine learning project to analyze, model, and predict customer churn using EDA and advanced classification techniques."
   },
   {
-    "name": "Employee Payroll Management System",
-    "link": "https://github.com/kjuhi-18/Employee-Payroll-Management-System",
-    "tags": ["Java","JDBC","JavaFX"],
-    "shortDescription": "An employee payroll system manages records, calculates salaries, and generates accurate payroll reports efficiently."
+    "name": "Mapping Unsafe Drinking Water Zones",
+    "link": "https://github.com/kjuhi-18/Mapping-Unsafe-Drinking-Water-Zones",
+    "tags": [
+      "Python",
+      "Streamlit",
+      "ML"
+    ],
+    "shortDescription": "Geospatial map visualising unsafe drinking water zones across districts using ML clustering."
   },
   {
-    "name": "Currency Converter",
-    "link": "https://github.com/kjuhi-18/Currency-Convertor",
-    "tags": ["C"],
-    "shortDescription": "Console-based currency conversion tool written in C."
+    "name": "Movie Data Dashboard",
+    "link": "https://github.com/kjuhi-18/Book-My-Show-Analysis",
+    "tags": [
+      "Python",
+      "MySQL",
+      "Flask",
+      "HTML",
+      "CSS"
+    ],
+    "shortDescription": "Interactive dashboard analysing movie ticket sales and user behaviour from BookMyShow data."
   },
   {
-    "name": "Password Generator",
-    "link": "https://github.com/kjuhi-18/Password-Generator",
-    "tags": ["Python"],
-    "shortDescription": "Simple Python script to generate strong random passwords."
+    "name": "English French Translator",
+    "link": "https://github.com/kjuhi-18/English-French-Translator",
+    "tags": [
+      "Python",
+      "GenAI"
+    ],
+    "shortDescription": "Translator to translate between English and French using Tranformers."
   },
   {
     "name": "Student Management System",
     "link": "https://github.com/kjuhi-18/Student-Management-System",
-    "tags": ["Python", "SQL", "Streamlit"],
+    "tags": [
+      "Python",
+      "SQL",
+      "Streamlit"
+    ],
     "shortDescription": "Streamlit + MySQL based student management system for students."
+  },
+  {
+    "name": "Employee Payroll Management System",
+    "link": "https://github.com/kjuhi-18/Employee-Payroll-Management-System",
+    "tags": [
+      "Java",
+      "JDBC",
+      "JavaFX"
+    ],
+    "shortDescription": "An employee payroll system manages records, calculates salaries, and generates accurate payroll reports efficiently."
   },
   {
     "name": "House Price Predictor",
     "link": "https://github.com/kjuhi-18/House-price-predictor",
-    "tags": ["Python", "ML"],
+    "tags": [
+      "Python",
+      "ML"
+    ],
     "shortDescription": "Machine-learning model predicting house prices using historical datasets."
+  },
+  {
+    "name": "Mail Automator",
+    "link": "https://github.com/kjuhi-18/Mail-Automator",
+    "tags": [
+      "Python"
+    ],
+    "shortDescription": "Tool to automate sending templated emails for campaigns & reminders."
+  },
+  {
+    "name": "Password Generator",
+    "link": "https://github.com/kjuhi-18/Password-Generator",
+    "tags": [
+      "Python"
+    ],
+    "shortDescription": "Simple Python script to generate strong random passwords."
+  },
+  {
+    "name": "Currency Converter",
+    "link": "https://github.com/kjuhi-18/Currency-Convertor",
+    "tags": [
+      "C"
+    ],
+    "shortDescription": "Console-based currency conversion tool written in C."
   }
-  
-  
 ]
-
