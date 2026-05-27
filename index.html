@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunal Jhindal — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container fade-in">
+    <header class="fade-in">
+      <div class="brand fade-in">
+        <img src="profile.jpeg" alt="Kunal Jhindal" class="avatar fade-in" />
+        <div>
+          <h1 id="typing"></h1>
+          <p class="subtitle">B.Tech AI-ML • Data Science & ML • Pune, India</p>
+        </div>
+      </div>
+
+      <nav class="nav fade-in">
+        <button data-section="about">About</button>
+        <button data-section="projects">Projects</button>
+        <button data-section="learning">Learning Repos</button>
+        <button data-section="skills">Skills</button>
+        <button data-section="stats">GitHub Stats</button>
+        <button data-section="contact">Contact</button>
+      </nav>
+
+      <button id="themeToggle" class="theme-toggle fade-in">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section id="about" class="active section fade-in">
+        <div class="card fade-in">
+          <h2>About Me</h2>
+          <p>🎓 I'm a B.Tech student in AI & ML at Symbiosis Institute of Technology, Pune. I’m passionate about <b>Data
+              Science, Machine Learning,</b> and building practical systems that merge technology with creativity.</p>
+          <p>🚀 I enjoy working on <b>Python–MySQL integrations, ML models,</b> and real-world analytics projects.</p>
+          <div class="btns">
+            <a class="btn" href="resume.pdf" target="_blank">⬇ Resume</a>
+            <a class="btn" href="https://github.com/kjuhi-18" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="grid-two fade-in">
+
+          <!-- LEFT COLUMN -->
+          <div>
+
+            <div class="card fade-in roles-card">
+
+              <h3>Roles & Leadership</h3>
+
+              <div class="mini-cards">
+
+                <div class="mini-card fade-in">
+                  <b>Gemini Student Ambassador 2025</b><br>
+                  <span>Google (August-2025 – December-2025)</span>
+                </div>
+
+                <div class="mini-card fade-in">
+                  <b>Gemini Student Ambassador 2026</b><br>
+                  <span>Google (May-2026 – Present)</span>
+                </div>
+
+                <div class="mini-card fade-in">
+                  <b>Visual Media Editor</b><br>
+                  <span>AIML Department</span>
+                </div>
+                <div class="mini-card fade-in">
+                  <b>Finance Co-Head</b><br>
+                  <span>Protathlitis'26</span>
+                </div>
+
+
+                <div class="mini-card fade-in">
+                  <b>Finance Executive</b><br>
+                  <span>Varsity Care</span>
+                </div>
+
+                <div class="mini-card fade-in ai-club-promo">
+
+                  <b>Tech Team Executive</b><br>
+                  <span>Feb 2026 – Present</span>
+
+                  <div class="promo-sub">
+
+                    <b>Tech Team Member</b><br>
+
+                    <span>
+                      <span class="date-small">
+                        Oct 2024 – Feb 2026
+                      </span><br>
+
+                      AI Club – SIT Pune
+                    </span>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="achievements-card fade-in">
+
+                <h3>🏆 Achievements</h3>
+
+                <div class="mini-cards">
+
+                  <a href="achievements/sql_basic.png" target="_blank" class="mini-card fade-in">
+
+                    <b>SQL (Basic)</b><br>
+                    <span>HackerRank • July 2025</span>
+
+                  </a>
+
+                  <a href="achievements/sql_intermediate.png" target="_blank" class="mini-card fade-in">
+
+                    <b>SQL (Intermediate)</b><br>
+                    <span>HackerRank • 2025</span>
+
+                  </a>
+
+                  <a href="achievements/sql_advanced.png" target="_blank" class="mini-card fade-in">
+
+                    <b>SQL (Advanced)</b><br>
+                    <span>HackerRank • 2025</span>
+
+                  </a>
+
+                  <a href="achievements/python_basic.png" target="_blank" class="mini-card fade-in">
+
+                    <b>Python (Basic)</b><br>
+                    <span>HackerRank • 2025</span>
+
+                  </a>
+                  <a href="achievements/pbl_4.heic" target="_blank" class="mini-card fade-in">
+
+                    <b>4th Prize in Project Display During Industry Conclave</b><br>
+                    <span>AIML Department • 2026</span>
+
+                  </a>
+
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div>
+
+            <!-- CERTIFICATIONS -->
+            <div class="card fade-in">
+
+              <h3>Certifications</h3>
+
+              <div class="mini-cards" id="certGrid">
+
+                <a href="certificates/python_data_science_ai.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>Python for Data Science & AI</b><br>
+                  <span>IBM</span>
+
+                </a>
+
+                <a href="certificates/machine_learning_with_python.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>Machine Learning with Python</b><br>
+                  <span>IBM</span>
+
+                </a>
+
+                <a href="certificates/data_analysis_with_python.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>Data Analysis with Python</b><br>
+                  <span>IBM (Feb 2025)</span>
+
+                </a>
+                <a href="certificates/SML.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>Supervised Learning Models</b><br>
+                  <span>Infosys Springboard</span>
+
+                </a>
+                <a href="certificates/mastering_generative_ai_chatgpt.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>Mastering Generative AI & ChatGPT</b><br>
+                  <span>GeeksforGeeks</span>
+
+                </a>
+                <a href="certificates/intro_data_analysis_excel.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>Intro to Data Analysis using Excel</b><br>
+                  <span>Coursera</span>
+
+                </a>
+
+                <a href="certificates/excel_basics_data_analysis.pdf" target="_blank"
+                  class="mini-card fade-in hidden-cert">
+
+                  <b>Excel Basics for Data Analysis</b><br>
+                  <span>SkillUp EdTech</span>
+
+                </a>
+                <a href="certificates/Python Beginner(Skill up).pdf" target="_blank"
+                  class="mini-card fade-in hidden-cert">
+
+                  <b>Python for Beginners</b><br>
+                  <span>SkillUP</span>
+
+                </a>
+
+
+                <a href="certificates/basics_of_dsa.pdf" target="_blank" class="mini-card fade-in hidden-cert">
+
+                  <b>Basics of DSA</b><br>
+                  <span>SkillUp</span>
+
+                </a>
+
+                <a href="certificates/generative_ai.jpg" target="_blank" class="mini-card fade-in hidden-cert">
+
+                  <b>Generative AI</b><br>
+                  <span>LinkedIn</span>
+
+                </a>
+
+              </div>
+              <button id="toggleCerts" class="btn">
+                View All Certifications
+              </button>
+
+            </div>
+
+            <!-- WORKSHOPS -->
+            <div class="card fade-in">
+
+              <h3>🚀 Workshops & Participation</h3>
+
+              <div class="mini-cards">
+
+                <a href="p_certifica/nasscom_w.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>AI CODE SARATHI 2025</b><br>
+                  <span>Workshop Participation</span>
+
+                </a>
+
+                <a href="p_certifica/gfg_w.png" target="_blank" class="mini-card fade-in">
+
+                  <b>Build Smarter, Scalable AI Agents with UiPath</b><br>
+                  <span>Workshop Participation</span>
+
+                </a>
+
+                <a href="p_certifica/DS3_w.png" target="_blank" class="mini-card fade-in">
+
+                  <b>Data Science Summer School</b><br>
+                  <span>Summer School Certificate</span>
+
+                </a>
+                <a href="p_certifica/ml_spark_h.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>ML Spark Challenge</b><br>
+                  <span>Hackathon Participation</span>
+
+                </a>
+                <a href="p_certifica/dataanalytics_js.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>Data Analytics Job Simulation</b><br>
+                  <span>Job Simulation</span>
+
+                </a>
+                <a href="p_certifica/Interview_Master_SQL_c.pdf" target="_blank" class="mini-card fade-in">
+
+                  <b>24 Days SQL Challenge</b><br>
+                  <span>Coding Challenge</span>
+
+                </a>
+
+                <a href="p_certifica/engday_w.png" target="_blank" class="mini-card fade-in hidden-workshop">
+
+                  <b>Turning Projects into Business Ideas + Finance and Fundraising</b><br>
+                  <span>Workshop Participation</span>
+
+                </a>
+
+
+
+                <a href="p_certifica/2fast2hack_h.jpg" target="_blank" class="mini-card fade-in hidden-workshop">
+
+                  <b>2 Fast 2 Hack</b><br>
+                  <span>Hackathon Participation</span>
+
+                </a>
+
+                <a href="p_certifica/GreenOlympiad_q.pdf" target="_blank" class="mini-card fade-in hidden-workshop">
+
+                  <b>Green Olympiad 2025</b><br>
+                  <span>Olympiad Participation</span>
+
+                </a>
+
+
+
+                <a href="p_certifica/tatacrucible_c.pdf" target="_blank" class="mini-card fade-in hidden-workshop">
+
+                  <b>TATA Crucible Campus Quiz 2025</b><br>
+                  <span>Quiz Participation</span>
+
+                </a>
+
+                <a href="p_certifica/tataimag_c.pdf" target="_blank" class="mini-card fade-in hidden-workshop">
+
+                  <b>Tata Imagination Challenge 2025</b><br>
+                  <span>Quiz Participation</span>
+
+                </a>
+
+
+
+              </div>
+              <button id="toggleWorkshops" class="btn">
+                View All Workshops
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+  </div>
+
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section fade-in">
+
+    <div class="card fade-in">
+
+      <h2>Projects</h2>
+
+      <input id="search" type="text" placeholder="🔍 Search projects..." />
+
+      <div id="repoContainer" class="repo-grid fade-in">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LEARNING REPOSITORIES SECTION -->
+  <section id="learning" class="section fade-in">
+
+    <div class="card fade-in">
+
+      <h2>📚 Learning Repositories</h2>
+
+      <p style="
+      margin-bottom:1rem;
+      opacity:0.9;
+      line-height:1.6;
+    ">
+        Repositories focused on learning,
+        practice, notes, and helping beginners
+        understand concepts in Machine Learning,
+        DSA, Java, C programming,
+        preprocessing-eda .
+      </p>
+
+      <input id="learningSearch" type="text" placeholder="🔍 Search learning repositories..." />
+
+      <div id="learningContainer" class="repo-grid fade-in">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section fade-in">
+    <div class="card fade-in">
+      <h2>Skills</h2>
+      <div class="skills-grid fade-in">
+        <div>
+          <h3>🧠 Technical Skills</h3>
+          <div class="chips">
+            <span>Python</span><span>R</span><span>C</span><span>SQL</span>
+            <span>Machine Learning</span><span>Data Analysis</span>
+            <span>MySQL</span><span>Visualization</span>
+            <span>DSA</span><span>Operating Systems</span>
+            <span>Excel</span><span>Streamlit</span><span>Flask</span>
+          </div>
+        </div>
+        <div>
+          <h3>🤝 Non-Technical Skills</h3>
+          <div class="chips">
+            <span>Communication</span><span>Leadership</span>
+            <span>Problem Solving</span><span>Teamwork</span>
+            <span>Creativity</span><span>Presentation</span>
+            <span>Adaptability</span><span>Critical Thinking</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="tech-stack fade-in">
+        <h3>⚙️ Tech Stack</h3>
+        <div class="badges">
+          <span class="badge python">Python</span>
+          <span class="badge mysql">MySQL</span>
+          <span class="badge c">C</span>
+          <span class="badge r">R</span>
+          <span class="badge mongodb">MongoDB</span>
+          <span class="badge streamlit">Streamlit</span>
+          <span class="badge pandas">Pandas</span>
+          <span class="badge numpy">NumPy</span>
+          <span class="badge matplotlib">Matplotlib</span>
+          <span class="badge seaborn">Seaborn</span>
+          <span class="badge plotly">Plotly</span>
+          <span class="badge sklearn">Scikit-learn</span>
+          <span class="badge tensorflow">TensorFlow</span>
+          <span class="badge keras">Keras</span>
+          <span class="badge scipy">SciPy</span>
+          <span class="badge vscode">VS Code</span>
+          <span class="badge github">GitHub</span>
+          <span class="badge canva">Canva</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GitHub Stats Section -->
+  <section id="stats" class="section fade-in">
+    <div class="card fade-in">
+      <h2>GitHub Stats</h2>
+
+      <div class="stats-grid fade-in"
+        style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:center;">
+
+        <!-- GitHub Overall Stats -->
+        <img
+          src="https://github-readme-stats-sigma-five.vercel.app/api?username=kjuhi-18&show_icons=true&theme=tokyonight"
+          alt="GitHub Stats" style="max-width:100%; width:420px; border-radius:12px;" />
+
+        <!-- Top Languages -->
+        <img
+          src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kjuhi-18&layout=compact&theme=tokyonight"
+          alt="Top Languages" style="max-width:100%; width:350px; border-radius:12px;" />
+
+        <!-- Contribution Graph -->
+        <img
+          src="https://github-readme-activity-graph.vercel.app/graph?username=kjuhi-18&theme=react-dark&hide_border=true"
+          alt="Contribution Graph" style="max-width:100%; width:850px; border-radius:12px;" />
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in">
+    <div class="card contact-card fade-in">
+      <h2>Contact Me</h2>
+      <div class="contact-grid fade-in">
+        <div class="contact-item fade-in">
+          <h3>Email</h3>
+          <p><a href="mailto:jhindalkunal457@gmail.com">jhindalkunal457@gmail.com</a></p>
+        </div>
+        <div class="contact-item fade-in">
+          <h3>Location</h3>
+          <p>Pune, India</p>
+        </div>
+        <div class="contact-item fade-in">
+          <h3>LinkedIn</h3>
+          <p><a href="https://linkedin.com/in/kunal-jhindal" target="_blank">linkedin.com/in/kunal-jhindal</a></p>
+        </div>
+        <div class="contact-item fade-in">
+          <h3>GitHub</h3>
+          <p><a href="https://github.com/kjuhi-18" target="_blank">github.com/kjuhi-18</a></p>
+        </div>
+        <div class="contact-item fade-in">
+          <h3>HackerRank</h3>
+          <p><a href="https://www.hackerrank.com/profile/kunal_jhindal_b1" target="_blank">View Profile</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

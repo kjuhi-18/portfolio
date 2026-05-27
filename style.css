@@ -1,0 +1,555 @@
+/* =====================
+   Global Styles & Themes
+   ===================== */
+:root {
+  --bg: #0a0f1c;
+  --card-bg: #141b2d;
+  --text: #f0f0f0;
+  --accent: #00b4d8;
+  --secondary: #90e0ef;
+  --shadow: rgba(0, 0, 0, 0.5);
+
+  /* NEW COLORS */
+  --tag-color:#64b5f6;       /* mini tags */
+  --repo-btn-color: #3a0ca3;   /* GitHub Repo button */
+}
+
+body.light {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #0077b6;
+  --secondary: #00b4d8;
+  --shadow: rgba(0, 0, 0, 0.15);
+
+  /* Keep the custom colors even in light mode */
+  --tag-color:#64b5f6;       /* mini tags */
+  --repo-btn-color: #3a0ca3;   /* GitHub Repo button */}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease;
+}
+
+/* =====================
+   Layout
+   ===================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.subtitle {
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.nav button {
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+  color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav button.active,
+.nav button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+#themeToggle {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+#themeToggle:hover {
+  background: var(--secondary);
+}
+
+/* =====================
+   Sections
+   ===================== */
+.section {
+  display: none;
+  margin-top: 2rem;
+}
+
+.section.active {
+  display: block;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.card h2,
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 0.7rem;
+}
+
+.btns {
+  margin-top: 1rem;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--secondary);
+}
+
+/* =====================
+   Grids and Mini Cards
+   ===================== */
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem;
+}
+
+.mini-card {
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none !important;
+  color: var(--text) !important;
+}
+
+.mini-card:hover {
+  background: var(--accent);
+  color: var(--bg) !important;
+  transform: scale(1.03);
+}
+
+/* =====================
+   Projects Section
+   ===================== */
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.repo {
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: 0.3s ease;
+}
+
+.repo:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-4px);
+}
+
+/* 📌 Tags — UPDATED */
+.repo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: var(--tag-color);
+  color: var(--bg);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* 📌 Description */
+.repo-desc {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.3;
+}
+
+/* 📌 Repo Button — UPDATED */
+.repo a {
+  margin-top: auto;
+  background: var(--repo-btn-color);
+  color: var(--bg);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.repo a:hover {
+  background: var(#e51d1d);
+  color: var(--bg);
+}
+
+#search,
+#learningSearch {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* =====================
+   Skills Section
+   ===================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chips span {
+  border: 1px solid var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.chips span:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* =====================
+   GitHub Stats
+   ===================== */
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stats-grid img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+/* =====================
+   Contact Section
+   ===================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.contact-item {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  text-align: center;
+}
+
+.contact-item a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   Footer
+   ===================== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 768px) {
+  .brand {
+    flex-direction: column;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .nav button {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+/* POPUP + animations */
+#imgPopup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#imgPopup img {
+  width: 65%;
+  max-width: 420px;
+  border-radius: 12px;
+  border: 3px solid white;
+  animation: zoomIn .3s ease;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.6); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+/* Fade-in Scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Divider */
+.divider {
+  margin: 1.5rem 0;
+  border: none;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.4;
+}
+
+/* Tech Stack Badges */
+.tech-stack {
+  text-align: center;
+}
+
+.tech-stack h3 {
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Badge Colors */
+.python { background: #3776AB; }
+.mysql { background: #4479A1; }
+.c { background: #00599C; }
+.r { background: #276DC3; }
+.mongodb { background: #4DB33D; }
+.streamlit { background: #FF4B4B; }
+.pandas { background: #150458; }
+.numpy { background: #013243; }
+.matplotlib { background: #11557C; }
+.seaborn { background: #4E9FB4; }
+.plotly { background: #3F4F75; }
+.sklearn { background: #F7931E; }
+.tensorflow { background: #FF6F00; }
+.keras { background: #D00000; }
+.scipy { background: #005CA0; }
+.vscode { background: #007ACC; }
+.github { background: #181717; }
+.canva { background: #00C4CC; }
+
+/* Roles */
+.grid-two {
+  align-items: start;
+}
+
+.roles-card {
+  height: auto !important;
+  padding-bottom: 0.6rem !important;
+}
+
+.achievements-card {
+  margin-top: 1.2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--accent);
+}
+
+.achievements-card h3 {
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.achievements-card .mini-cards {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.7rem;
+}
+
+.achievements-card .mini-card {
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.achievements-card .mini-card:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.03);
+}
+.ai-club-promo {
+  line-height: 1.4;
+}
+
+.ai-club-promo .promo-sub {
+  margin-top: 14px;
+  padding-left: 0;
+  border-left: none;
+}
+
+.ai-club-promo span {
+  font-size: 0.9rem;
+  color:inherit;
+}
+.ai-club-promo .promo-sub span:last-child {
+  font-size: 1.05rem;   /* increase only AI Club – SIT Pune text */
+}
+.ai-club-promo .date-small {
+  font-size: 0.85rem;   /* slightly smaller */
+  opacity: 0.85;        /* softer look */
+}
+.hidden-cert {
+  display: none;
+}
+.hidden-workshop {
+  display: none;
+}

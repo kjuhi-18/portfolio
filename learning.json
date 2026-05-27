@@ -1,0 +1,47 @@
+
+[
+  
+  {
+    "name": "Data PreProcessing and EDA",
+    "link": "https://github.com/kjuhi-18/Data-PreProcessing-and-Exploratory-Data-Analysis",
+    "tags": ["Python", "EDA","Preprocessing"],
+    "shortDescription": "This repository covers data preprocessing and EDA, including cleaning, visualization, feature scaling, and insights generation."
+  },
+  {
+    "name": "Supervised Machine Learning",
+    "link": "https://github.com/kjuhi-18/Supervised-Machine-Learning",
+    "tags": ["Python", "ML"],
+    "shortDescription": "A collection of supervised ML projects for classification and regression with preprocessing, training, evaluation, and visualization."
+  },
+  {
+    "name": "Unsupervised Machine Learning",
+    "link": "https://github.com/kjuhi-18/Unsupervised-Machine-Learning",
+    "tags": ["Python", "ML"],
+    "shortDescription": "An unsupervised ML repository featuring clustering, PCA, pattern discovery, visualizations, and beginner-friendly Python notebooks."
+  },
+  {
+    "name": "Data Structures and Algorithms",
+    "link": "https://github.com/kjuhi-18/Basic-DSA",
+    "tags": ["C"],
+    "shortDescription": "Basic DSA is a beginner-friendly C repository covering core data structures, sorting, searching, and algorithms concepts."
+  },
+  {
+    "name": "Basic Java Programs",
+    "link": "https://github.com/kjuhi-18/Java-Lab-Assignments",
+    "tags": ["Java"],
+    "shortDescription": "A beginner-friendly repository containing basic Java programs to learn core concepts, syntax, and problem-solving skills."
+  },
+  {
+    "name": "Basic C Programs",
+    "link": "https://github.com/kjuhi-18/Basic-C-Programs",
+    "tags": ["C"],
+    "shortDescription": "A beginner-friendly repository of basic C programs covering loops, functions, arrays, pointers, and core programming concepts."
+  }
+]
+
+
+
+
+  
+
+
