@@ -9,11 +9,19 @@
     "shortDescription": "SmartProcure AI predicts delivery delays and optimizes dispatch using ML-powered logistics intelligence."
   },
   {
+    "name": "Mutual Fund Analytics & Risk Analysis System(BlueStock Capstone)",
+    "link": "https://github.com/kjuhi-18/bluestock_mf_capstone",
+    "tags": [
+      "Python","SQL","Analysis","PowerBI","HTML"
+    ],
+    "shortDescription": "Comprehensive mutual fund analytics capstone covering ETL, performance analysis, risk modeling, dashboards, and automation."
+  },
+  {
     "name": "UIDAI Aadhaar Decision Intelligence System",
     "link": "https://github.com/kjuhi-18/uidai-decision-intelligence-system",
     "tags": [
       "Python",
-      "ML"
+      "ML","Analysis"
     ],
     "shortDescription": "Hackathon project that transforms UIDAI Aadhaar enrolment and update data into actionable insights using EDA anomaly detection and machine learning forecasting"
   },

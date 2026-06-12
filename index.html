@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kunal Jhindal — Portfolio</title>
+  <title>Kunal Jhindal — Project Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -21,8 +21,7 @@
 
       <nav class="nav fade-in">
         <button data-section="about">About</button>
-        <button data-section="projects">Projects</button>
-        <button data-section="learning">Learning Repos</button>
+        <button data-section="projects">Project Hub</button>
         <button data-section="skills">Skills</button>
         <button data-section="stats">GitHub Stats</button>
         <button data-section="contact">Contact</button>
@@ -350,37 +349,32 @@
 
     <div class="card fade-in">
 
-      <h2>Projects</h2>
+      <h2>🚀 Project Hub</h2>
+      <div class="search-wrapper">
+        <p class="hub-subtitle">
+          Building real-world solutions and sharing knowledge through open-source learning resources.
+        </p>
+        <input id="hubSearch" type="text" placeholder="Search Projects & Learning Lab...">
+      </div>
 
-      <input id="search" type="text" placeholder="🔍 Search projects..." />
+      <h3 style="margin-top:2rem;">Projects</h3>
+
 
       <div id="repoContainer" class="repo-grid fade-in">
       </div>
 
-    </div>
+      <hr class="divider">
 
-  </section>
+      <h3 style="margin-top:2rem;">
+        Learning Lab
+      </h3>
 
-  <!-- LEARNING REPOSITORIES SECTION -->
-  <section id="learning" class="section fade-in">
-
-    <div class="card fade-in">
-
-      <h2>📚 Learning Repositories</h2>
-
-      <p style="
-      margin-bottom:1rem;
-      opacity:0.9;
-      line-height:1.6;
-    ">
-        Repositories focused on learning,
-        practice, notes, and helping beginners
-        understand concepts in Machine Learning,
-        DSA, Java, C programming,
-        preprocessing-eda .
+      <p>
+        Repositories focused on concepts, experimentation, practice, and learning journeys. Beyond documenting my own
+        learning, they are designed to be beginner-friendly resources that others can refer to for understanding
+        concepts, implementation details, and hands-on examples.
       </p>
 
-      <input id="learningSearch" type="text" placeholder="🔍 Search learning repositories..." />
 
       <div id="learningContainer" class="repo-grid fade-in">
       </div>
