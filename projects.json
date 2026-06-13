@@ -1,6 +1,12 @@
 [
   {
-    "name": "SmartProcure",
+    "name": "⭐FlightWise-AI",
+    "link": "https://github.com/kjuhi-18/FlightWise-AI",
+    "tags": ["Python","ML","Streamlit","Analysis","XGBoost"],
+    "shortDescription":"FlightWise AI – An end-to-end machine learning platform that predicts flight delays and provides operational recovery insights using aviation analytics and XGBoost."
+  },
+  {
+    "name": "⭐SmartProcure",
     "link": "https://github.com/kjuhi-18/SmartProcure",
     "tags": [
       "Python",
@@ -8,8 +14,9 @@
     ],
     "shortDescription": "SmartProcure AI predicts delivery delays and optimizes dispatch using ML-powered logistics intelligence."
   },
+  
   {
-    "name": "Mutual Fund Analytics & Risk Analysis System(BlueStock Capstone)",
+    "name": "⭐Mutual Fund Analytics & Risk Analysis System(BlueStock Capstone)",
     "link": "https://github.com/kjuhi-18/bluestock_mf_capstone",
     "tags": [
       "Python","SQL","Analysis","PowerBI","HTML"
@@ -17,7 +24,7 @@
     "shortDescription": "Comprehensive mutual fund analytics capstone covering ETL, performance analysis, risk modeling, dashboards, and automation."
   },
   {
-    "name": "UIDAI Aadhaar Decision Intelligence System",
+    "name": "⭐UIDAI Aadhaar Decision Intelligence System",
     "link": "https://github.com/kjuhi-18/uidai-decision-intelligence-system",
     "tags": [
       "Python",
@@ -57,6 +64,24 @@
     "shortDescription": "Geospatial map visualising unsafe drinking water zones across districts using ML clustering."
   },
   {
+    "name": "English French Translator",
+    "link": "https://github.com/kjuhi-18/English-French-Translator",
+    "tags": [
+      "Python",
+      "GenAI"
+    ],
+    "shortDescription": "Translator to translate between English and French using Tranformers."
+  },
+  {
+    "name": "House Price Predictor",
+    "link": "https://github.com/kjuhi-18/House-price-predictor",
+    "tags": [
+      "Python",
+      "ML"
+    ],
+    "shortDescription": "Machine-learning model predicting house prices using historical datasets."
+  },
+  {
     "name": "Movie Data Dashboard",
     "link": "https://github.com/kjuhi-18/Book-My-Show-Analysis",
     "tags": [
@@ -68,15 +93,7 @@
     ],
     "shortDescription": "Interactive dashboard analysing movie ticket sales and user behaviour from BookMyShow data."
   },
-  {
-    "name": "English French Translator",
-    "link": "https://github.com/kjuhi-18/English-French-Translator",
-    "tags": [
-      "Python",
-      "GenAI"
-    ],
-    "shortDescription": "Translator to translate between English and French using Tranformers."
-  },
+  
   {
     "name": "Student Management System",
     "link": "https://github.com/kjuhi-18/Student-Management-System",
@@ -97,15 +114,7 @@
     ],
     "shortDescription": "An employee payroll system manages records, calculates salaries, and generates accurate payroll reports efficiently."
   },
-  {
-    "name": "House Price Predictor",
-    "link": "https://github.com/kjuhi-18/House-price-predictor",
-    "tags": [
-      "Python",
-      "ML"
-    ],
-    "shortDescription": "Machine-learning model predicting house prices using historical datasets."
-  },
+  
   {
     "name": "Mail Automator",
     "link": "https://github.com/kjuhi-18/Mail-Automator",

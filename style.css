@@ -186,11 +186,7 @@ header {
 /* =====================
    Grids and Mini Cards
    ===================== */
-.grid-two {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-}
+
 
 .mini-cards {
   display: grid;
@@ -280,21 +276,10 @@ header {
 }
 
 .repo a:hover {
-  background: var(#e51d1d);
+  background:#e51d1d;
   color: var(--bg);
 }
 
-#search,
-#learningSearch {
-  width: 100%;
-  padding: 0.6rem;
-  border-radius: 10px;
-  border: 1px solid var(--accent);
-  background: transparent;
-  color: var(--text);
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
 
 /* =====================
    Skills Section
@@ -367,15 +352,7 @@ header {
   text-decoration: underline;
 }
 
-/* =====================
-   Footer
-   ===================== */
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: var(--secondary);
-  font-size: 0.9rem;
-}
+
 
 /* =====================
    Responsive
@@ -498,6 +475,9 @@ footer {
 
 /* Roles */
 .grid-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
   align-items: start;
 }
 
@@ -573,13 +553,8 @@ footer {
 }
 
 .search-wrapper::before {
-  content: "🔍";
-  position: absolute;
-  left: 405px;
-  top: 75%;
-  transform: translateY(-50%);
-  opacity: 0.7;
-  font-size: 1rem;
+  left: 16px;
+  top: 50%;
 }
 
 #hubSearch {
@@ -590,7 +565,7 @@ footer {
   border: 1px solid rgba(0,255,255,0.25);
   border-radius: 14px;
 
-  color: white;
+  color: var(--text);
   font-size: 1rem;
   max-width: 700px;
   display: block;
