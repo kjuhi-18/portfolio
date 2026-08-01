@@ -353,105 +353,51 @@ faders.forEach((fader) =>
 // =============================
 // Certifications Toggle
 // =============================
-const toggleBtn =
-  document.getElementById(
-    "toggleCerts"
-  );
+const toggleBtn = document.getElementById("toggleCerts");
 
 if (toggleBtn) {
 
-  toggleBtn.addEventListener(
-    "click",
-    () => {
+    const hiddenCards = document.querySelectorAll(".hidden-cert");
+    let expanded = false;
 
-      const hiddenCards =
-        document.querySelectorAll(
-          ".hidden-cert"
-        );
+    toggleBtn.addEventListener("click", () => {
 
-      hiddenCards.forEach(
-        (card) => {
+        expanded = !expanded;
 
-          if (
-            card.style.display ===
-            "block"
-          ) {
+        hiddenCards.forEach(card => {
+            card.style.display = expanded ? "block" : "none";
+        });
 
-            card.style.display =
-              "none";
-
-            toggleBtn.textContent =
-              "View All Certifications";
-
-          } else {
-
-            card.style.display =
-              "block";
-
-            toggleBtn.textContent =
-              "Show Less";
-
-          }
-
-        }
-      );
-
-    }
-  );
+        toggleBtn.textContent = expanded
+            ? "Show Less"
+            : "View All Certifications";
+    });
 
 }
-
 // =============================
 // Workshops Toggle
 // =============================
-const workshopBtn =
-  document.getElementById(
-    "toggleWorkshops"
-  );
+const workshopBtn = document.getElementById("toggleWorkshops");
 
 if (workshopBtn) {
 
-  workshopBtn.addEventListener(
-    "click",
-    () => {
+    const hiddenWorkshops = document.querySelectorAll(".hidden-workshop");
+    let expanded = false;
 
-      const hiddenWorkshops =
-        document.querySelectorAll(
-          ".hidden-workshop"
-        );
+    workshopBtn.addEventListener("click", () => {
 
-      hiddenWorkshops.forEach(
-        (card) => {
+        expanded = !expanded;
 
-          if (
-            card.style.display ===
-            "block"
-          ) {
+        hiddenWorkshops.forEach(card => {
+            card.style.display = expanded ? "block" : "none";
+        });
 
-            card.style.display =
-              "none";
-
-            workshopBtn.textContent =
-              "View All Workshops";
-
-          } else {
-
-            card.style.display =
-              "block";
-
-            workshopBtn.textContent =
-              "Show Less";
-
-          }
-
-        }
-      );
-
-    }
-  );
+        workshopBtn.textContent = expanded
+            ? "Show Less"
+            : "View All Workshops";
+    });
 
 }
-
 // =============================
 // Initial Load
 // =============================

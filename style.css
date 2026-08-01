@@ -194,22 +194,8 @@ header {
   gap: 0.7rem;
 }
 
-.mini-card {
-  background: var(--bg);
-  border: 1px solid var(--accent);
-  border-radius: 10px;
-  padding: 0.8rem;
-  font-size: 0.9rem;
-  transition: background 0.3s, transform 0.3s;
-  text-decoration: none !important;
-  color: var(--text) !important;
-}
 
-.mini-card:hover {
-  background: var(--accent);
-  color: var(--bg) !important;
-  transform: scale(1.03);
-}
+
 
 /* =====================
    Projects Section
@@ -539,12 +525,7 @@ header {
   font-size: 0.85rem;   /* slightly smaller */
   opacity: 0.85;        /* softer look */
 }
-.hidden-cert {
-  display: none;
-}
-.hidden-workshop {
-  display: none;
-}
+
 /* ===== Project Hub Search ===== */
 
 .search-wrapper {
@@ -578,4 +559,59 @@ header {
   color: rgba(255,255,255,0.75);
   margin-bottom: 1.5rem;
   line-height: 1.6;
+}
+.mini-cards > a:not(.hidden-cert):not(.hidden-workshop) {
+    display: block;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.mini-cards > a:hover,
+.mini-cards > a:visited,
+.mini-cards > a:link,
+.mini-cards > a:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+.mini-card {
+    display: block;
+    background: var(--bg);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.mini-card,
+.mini-card:link,
+.mini-card:visited,
+.mini-card:hover,
+.mini-card:active {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.mini-card:hover {
+    background: var(--accent);
+    color: var(--bg);
+    transform: scale(1.03);
+}
+
+.mini-card:hover * {
+    color: inherit;
+}
+
+.mini-card b,
+.mini-card span {
+    color: inherit;
+}
+.hidden-cert {
+    display: none !important;
+}
+
+.hidden-workshop {
+    display: none !important;
 }
