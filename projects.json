@@ -6,6 +6,34 @@
     "shortDescription":"FlightWise AI – An end-to-end machine learning platform that predicts flight delays and provides operational recovery insights using aviation analytics and XGBoost."
   },
   {
+    "name": "⭐RevenIQ",
+    "link": "https://github.com/kjuhi-18/RevenIQ",
+    "tags": [
+      "Python","ML","Analysis","Streamlit","XGBoost","Dashboard","Gemini"
+    ],
+    "shortDescription": "RevenIQ is an AI-powered revenue intelligence platform that combines XGBoost forecasting, budget simulation, uncertainty analysis, and Gemini-powered strategic recommendations to help marketing teams make data-driven investment decisions."
+  },
+  {
+    "name": "⭐Nifty-100  ",
+    "link": "https://github.com/kjuhi-18/nifty100-financial-intelligence",
+    "tags": [
+  "Python",
+  "Data Analysis",
+  "ETL",
+  "Streamlit",
+  "FastAPI",
+  "SQLite",
+  "Pandas",
+  "Scikit-Learn",
+  "XGBoost",
+  "Clustering",
+  "Dashboard",
+  "REST API",
+  "Pytest"
+],
+    "shortDescription": "An end-to-end Nifty 100 financial analytics platform combining ETL, ML-driven clustering, stock screening, FastAPI, Streamlit dashboards, and automated financial insights."
+  },
+  {
     "name": "⭐SmartProcure",
     "link": "https://github.com/kjuhi-18/SmartProcure",
     "tags": [
@@ -32,6 +60,25 @@
     ],
     "shortDescription": "Hackathon project that transforms UIDAI Aadhaar enrolment and update data into actionable insights using EDA anomaly detection and machine learning forecasting"
   },
+  {
+    "name": "Sales Forecasting",
+    "link": "https://github.com/kjuhi-18/Sales-Forecasting",
+    "tags": [
+      "Analysis","ML","Python","Scikit-Learn","Streamlit","Forecasting","XGBoost"
+    ],
+    "shortDescription": "Built an XGBoost-based forecasting dashboard with anomaly detection and product demand segmentation for inventory planning."
+  },
+    
+  
+  {
+    "name": "Employee Attrition Prediction",
+    "link": "https://github.com/kjuhi-18/Employee_Attrition_Prediction",
+    "tags": [
+      "Analysis","ML","Python","Scikit-Learn"
+    ],
+    "shortDescription": "Built a machine-learning system to identify employee attrition risks and provide data-driven HR retention insights."
+  },
+  
   {
     "name": "Migrant Health Records (SIH 2025)",
     "link": "https://github.com/kjuhi-18/migrant-health-records",

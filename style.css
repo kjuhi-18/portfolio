@@ -615,3 +615,140 @@ header {
 .hidden-workshop {
     display: none !important;
 }
+/* =====================
+   Patent Card
+   ===================== */
+/* =====================
+   Patent Card
+   ===================== */
+
+.patent-card {
+  position: relative;
+
+  /* Remove generic .card appearance */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  /* Space + divider */
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 180, 216, 0.4);
+
+  overflow: visible;
+}
+
+
+.patent-item b {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.patent-item span {
+  color: var(--secondary);
+  font-size: 0.85rem;
+}
+
+.patent-btn {
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.55rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.patent-btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+}
+
+@media (max-width: 600px) {
+
+  .patent-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .patent-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+.patent-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+
+  padding: 0.8rem;
+
+  color: var(--text);
+
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.patent-item:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.01);
+}
+
+.patent-item:hover * {
+  color: inherit;
+}
+
+.patent-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.patent-info b {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+.patent-info span {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--secondary);
+  font-size: 0.85rem;
+}
+
+.patent-btn {
+  flex-shrink: 0;
+  padding: 0.55rem 1rem;
+  border-radius: 22px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+/* Space + divider between Achievements and Patent */
+.achievements-card .patent-card {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 180, 216, 0.35);
+}
+@media (max-width: 600px) {
+
+  .patent-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .patent-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
