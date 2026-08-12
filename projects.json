@@ -21,14 +21,12 @@
   "Data Analysis",
   "ETL",
   "Streamlit",
-  "FastAPI",
   "SQLite",
   "Pandas",
   "Scikit-Learn",
   "XGBoost",
   "Clustering",
   "Dashboard",
-  "REST API",
   "Pytest"
 ],
     "shortDescription": "An end-to-end Nifty 100 financial analytics platform combining ETL, ML-driven clustering, stock screening, FastAPI, Streamlit dashboards, and automated financial insights."
