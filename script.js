@@ -353,26 +353,24 @@ faders.forEach((fader) =>
 // =============================
 // Certifications Toggle
 // =============================
+
 const toggleBtn = document.getElementById("toggleCerts");
 
 if (toggleBtn) {
-
     const hiddenCards = document.querySelectorAll(".hidden-cert");
     let expanded = false;
 
     toggleBtn.addEventListener("click", () => {
-
         expanded = !expanded;
 
         hiddenCards.forEach(card => {
-            card.style.display = expanded ? "block" : "none";
+            card.classList.toggle("show-cert", expanded);
         });
 
         toggleBtn.textContent = expanded
             ? "Show Less"
             : "View All Certifications";
     });
-
 }
 // =============================
 // Workshops Toggle
@@ -380,23 +378,20 @@ if (toggleBtn) {
 const workshopBtn = document.getElementById("toggleWorkshops");
 
 if (workshopBtn) {
-
     const hiddenWorkshops = document.querySelectorAll(".hidden-workshop");
     let expanded = false;
 
     workshopBtn.addEventListener("click", () => {
-
         expanded = !expanded;
 
         hiddenWorkshops.forEach(card => {
-            card.style.display = expanded ? "block" : "none";
+            card.classList.toggle("show-workshop", expanded);
         });
 
         workshopBtn.textContent = expanded
             ? "Show Less"
             : "View All Workshops";
     });
-
 }
 // =============================
 // Initial Load

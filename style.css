@@ -612,8 +612,16 @@ header {
     display: none !important;
 }
 
+.hidden-cert.show-cert {
+    display: block !important;
+}
+
 .hidden-workshop {
     display: none !important;
+}
+
+.hidden-workshop.show-workshop {
+    display: block !important;
 }
 /* =====================
    Patent Card
